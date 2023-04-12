@@ -460,6 +460,31 @@ footer ul li a:hover{
     .nav__menu li{
         width: 100%;
         height: 3rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+    }
+
+    .nav__menu li:nth-child(2){
+        animation-delay: 200ms;
+    }
+
+    .nav__menu li:nth-child(3){
+        animation-delay: 400ms;
+    }
+
+    .nav__menu li:nth-child(4){
+        animation-delay: 600ms;
+    }
+
+    @keyframes animateNavItems {
+        0%{
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+            opacity: 0;
+        }100%{
+            transform: rotateZ(0deg) rotateX(0) scale(1);
+            opacity: 1;
+        }
+        
     }
 
     .nav__menu li a{
@@ -476,4 +501,111 @@ footer ul li a:hover{
         color: var(--color-white);
     }
 
+    /* ================HEADER */
+    header{
+        height: fit-content;
+        margin-bottom: 4rem;
+        top: 7rem;
+    }
+
+    .header__container{
+        gap: 0;
+        padding-bottom: 3rem;
+        grid-template-columns: 1fr;
+    }
+
+    .header__left h1{
+        font-size: 2rem;
+    }
+
+    /* ================CATEGORIES */
+
+    .categories{
+        height: auto;
+    }
+
+    .categories__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .categories__left{
+        margin-right: 0;
+    }
+
+    /* =========POPULAR COURSES */
+
+    .courses{
+        margin-top: 0;
+    }
+
+    .courses__container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* =========FAQS */
+
+    .faqs__container{
+        grid-template-columns: 1fr;
+    }
+
+    .faq{
+        padding: 1.5rem;
+    }
+
+    /* =========FOOTER */
+    .footer__container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* ======================== MEDIA QUERIES - PHONES */
+
+@media screen and (max-width:480px) {
+    .container{
+        width: var(--container-width-sm);
+    }
+
+    /* ======================== NAV BAR */
+    .nav__menu{
+        right: 3%;
+    }
+
+    header{
+        height: 100vh;
+    }
+
+    .header__container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .header__left p{
+        margin-bottom: 1rem;
+    }
+
+    /* ======================== CATEGORIES */
+
+    .categories__right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rems;
+    }
+
+    .category{
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .category__icon{
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+    /* ======================== POPULAR COURSES */
+    .courses__container{
+        grid-template-columns: 1fr;
+    }
+
+    
 }

@@ -22,3 +22,25 @@ faqs.forEach(faq => {
 
     })
 });
+
+// show hide nav
+
+const menu = document.querySelector('.nav__menu')
+const menuBtn = document.querySelector('#open-menu-btn')
+const closedBtn = document.querySelector('#close-menu-btn')
+
+menuBtn.addEventListener('click',()=>{
+    menu.style.display = 'flex';
+    closedBtn.style.display = 'inline-block';
+    menuBtn.style.display = 'none'
+})
+
+//close nav menu
+
+const closeNav = ()=>{
+    menu.style.display = 'none';
+    closedBtn.style.display = 'none';
+    menuBtn.style.display = 'inline-block'
+}
+
+closedBtn.addEventListener('click',closeNav)
