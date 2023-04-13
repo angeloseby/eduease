@@ -84,6 +84,7 @@ img{
     object-fit: cover;
 }
 
+
 .btn{
     display: inline-block;
     background: var(--color-white);
@@ -110,7 +111,7 @@ img{
 nav{
     background: transparent;
     width: 100vw;
-    height: 5rem;
+    height: 3rem;
     position: fixed;
     top:0;
     z-index: 11;    
@@ -124,11 +125,19 @@ nav{
 }
 
 .nav__container{
-    height: 5rem;
+    height: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+.nav__container-logo{
+    max-width: 25%;  
+    height: auto;  
+    margin-top: 0.5rem;
+    margin-left: -3rem;
+}
+
 
 nav button{
     display: none;
@@ -266,7 +275,7 @@ header{
 }
 
 .course__info{
-    padding:2rem;
+    padding:0rem;
     justify-content: space-around;
 }
 
@@ -446,6 +455,14 @@ footer ul li a:hover{
         display: none;
     }
 
+    .uil-bars{
+        margin-right: 1.5rem;
+    }
+
+    .uil-multiply{
+        margin-right: 1.5rem;
+    }
+
     .nav__menu{
         position:fixed;
         top: 5rem;
@@ -499,6 +516,13 @@ footer ul li a:hover{
     .nav__menu li a:hover{
         background: var(--color-bg2);
         color: var(--color-white);
+    }
+
+    .nav__container-logo{
+        max-width: 30%;  
+        height: auto;  
+        margin-top: 0.4rem;
+        margin-left: -1.5rem;
     }
 
     /* ================HEADER */
@@ -562,7 +586,7 @@ footer ul li a:hover{
 
 /* ======================== MEDIA QUERIES - PHONES */
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:640px) {
     .container{
         width: var(--container-width-sm);
     }
@@ -572,8 +596,15 @@ footer ul li a:hover{
         right: 3%;
     }
 
+    .nav__container-logo{
+        max-width: 50%;  
+        height: auto;  
+        margin-top: 0.4rem;
+        margin-left: 0;
+    }
+
     header{
-        height: 100vh;
+        height: fit-content;
     }
 
     .header__container{
@@ -582,10 +613,18 @@ footer ul li a:hover{
     }
 
     .header__left p{
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .header__right-image{
+        padding: 2rem;
     }
 
     /* ======================== CATEGORIES */
+
+    .categories{
+        text-align: center;
+    }
 
     .categories__right{
         grid-template-columns: 1fr 1fr;
@@ -594,7 +633,7 @@ footer ul li a:hover{
 
     .category{
         padding: 1rem;
-        border-radius: 1rem;
+        border-radius: 1.5rem;
     }
 
     .category__icon{
@@ -602,9 +641,20 @@ footer ul li a:hover{
         display: inline-block;
     }
 
+    .category__icon{
+        padding: 0.5rem 0.8rem;
+        border-radius: 1rem;
+    }
+
     /* ======================== POPULAR COURSES */
     .courses__container{
         grid-template-columns: 1fr;
+    }
+
+    .footer__container{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        justify-content: center;
     }
 
     
