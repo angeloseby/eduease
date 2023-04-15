@@ -1,0 +1,173 @@
+
+.contact__container{
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 25rem auto;
+    border-radius: 1rem;
+}
+
+.contact__aside{
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 0rem;
+}
+
+.aside__image{
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.contact__aside h2{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact__aside p{
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.contact__details li{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+    align-self: center;
+
+}
+
+.form__name{
+    display: flex;
+    gap: 1.0rem;
+}
+
+.contact__form input[type='text']{
+    width: 40%;
+}
+
+.contact__form input[type='email']{
+    width: 81%;
+}
+
+.contact__form input[type='tel']{
+    width: 81%;
+}
+
+input,textarea{
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color:var(--color-white);
+    border-radius: 0.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__message{
+    width: 81%;
+    resize: none;
+}
+
+
+
+.contact__form .btn{
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* =========MEDIA QUERIS = TABLET ==========*/
+
+@media screen and (max-width: 1024px){
+
+    .contact__container{
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+    .contact__aside{
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+
+    .contact__form{
+        align-self: center;
+        margin-right: 1rem;
+    }
+
+    .contact__form input[type='text']{
+        width: 44.5%;
+    }
+    
+    .contact__form input[type='email']{
+        width: 90%;
+    }
+
+    .contact__form input[type='tel']{
+        width: 90%;
+    }
+
+    .form__message{
+        width: 90%;
+        resize: none;
+    }
+}
+
+
+/* =========MEDIA QUERIS = PHONES ==========*/
+
+@media screen and (max-width:640px){
+    
+    .contact__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    .contact__form{
+        margin: 0 1.5rem 3rem;
+
+    }
+
+    .form__name{
+        flex-direction: column;
+    }
+
+    .form__name input[type='text']{
+        width: 100%;
+    }
+
+    .contact__form input[type='text']{
+        width: 100%;
+    }
+    
+    .contact__form input[type='email']{
+        width: 100%;
+    }
+
+    .contact__form input[type='tel']{
+        width: 100%;
+    }
+
+    .form__message{
+        width: 100%;
+        resize: none;
+    }
+
+}
